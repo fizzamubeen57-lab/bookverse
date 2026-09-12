@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | BookVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/books.css">
+</head>
+<body>
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+            <span><i class="fa-solid fa-envelope"></i> info@bookverse.com</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="books-hero">
+        <nav>
+            <div class="logo"><i class="fa-solid fa-book-open"></i> BookVerse</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html" class="active">Books</a></li>
+                <li><a href="ebooks.html">E-Books</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
+        <div class="books-hero-content">
+            <h1>Discover Your Next Great Book</h1>
+            <p>Explore thousands of bestselling books from famous authors around the world. Find books in Fiction, Programming, Business, History, Islamic Studies and much more.</p>
+            <div class="book-search">
+                <input type="text" id="bookSearch" placeholder="Search books by title or author...">
+                <button onclick="searchBooks()"><i class="fa-solid fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK CATEGORIES -->
+    <section class="book-categories">
+        <div class="section-title">
+            <h2>Browse Categories</h2>
+            <p>Select your favorite category and discover amazing books.</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <i class="fa-solid fa-book"></i>
+                <h3>Fiction</h3>
+                <p>Novels, Mystery, Romance & Fantasy</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Programming</h3>
+                <p>HTML, CSS, JavaScript, Python & C++</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Business</h3>
+                <p>Leadership, Marketing & Entrepreneurship</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-mosque"></i>
+                <h3>Islamic</h3>
+                <p>Quran, Hadith & Islamic History</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-landmark"></i>
+                <h3>History</h3>
+                <p>World History & Historical Events</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Academic</h3>
+                <p>Computer Science, Engineering & Mathematics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL BOOKS -->
+    <section class="all-books">
+        <div class="section-title">
+            <h2>All Books</h2>
+            <p>Explore our complete collection of books.</p>
+        </div>
+        <div class="books-grid" id="booksGrid">
+            <!-- Books will be loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="best-sellers">
+        <div class="section-title">
+            <h2>Best Sellers</h2>
+            <p>These are the most popular books loved by our readers.</p>
+        </div>
+        <div class="best-grid">
+            <div class="best-book">
+                <img src="images/think-grow-rich.jpg" alt="Think and Grow Rich">
+                <h3>Think and Grow Rich</h3>
+                <p>Napoleon Hill</p>
+            </div>
+            <div class="best-book">
+                <img src="images/zero-to-one.jpg" alt="Zero to One">
+                <h3>Zero to One</h3>
+                <p>Peter Thiel</p>
+            </div>
+            <div class="best-book">
+                <img src="images/python-crash-course.jpg" alt="Python Crash Course">
+                <h3>Python Crash Course</h3>
+                <p>Eric Matthes</p>
+            </div>
+            <div class="best-book">
+                <img src="images/sealed-nectar.jpg" alt="The Sealed Nectar">
+                <h3>The Sealed Nectar</h3>
+                <p>Safi-ur-Rahman</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW ARRIVALS -->
+    <section class="new-arrivals">
+        <div class="section-title">
+            <h2>New Arrivals</h2>
+            <p>Freshly added books waiting for you to explore.</p>
+        </div>
+        <div class="arrival-grid">
+            <div class="arrival-card">
+                <img src="images/deep-work.jpg" alt="Deep Work">
+                <h3>Deep Work</h3>
+                <p>Cal Newport</p>
+                <span>$19.99</span>
+            </div>
+            <div class="arrival-card">
+                <img src="images/cpp-primer.jpg" alt="C++ Primer">
+                <h3>C++ Primer</h3>
+                <p>Stanley Lippman</p>
+                <span>$32.99</span>
+            </div>
+            <div class="arrival-card">
+                <img src="images/lean-startup.jpg" alt="The Lean Startup">
+                <h3>The Lean Startup</h3>
+                <p>Eric Ries</p>
+                <span>$18.99</span>
+            </div>
+            <div class="arrival-card">
+                <img src="images/history-islam.jpg" alt="History of Islam">
+                <h3>History of Islam</h3>
+                <p>Various Authors</p>
+                <span>$21.99</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to BookVerse</h2>
+            <p>Get updates about new books, exclusive discounts, and weekly reading recommendations.</p>
+            <form>
+                <input type="email" placeholder="Enter Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>BookVerse</h3>
+                <p>BookVerse is your online destination for discovering, purchasing, and reading the world's best books and e-books.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="ebooks.html">E-Books</a>
+                <a href="categories.html">Categories</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-envelope"></i> info@bookverse.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Faisalabad, Pakistan</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2026 BookVerse. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/books.js"></script>
+</body>
+</html>

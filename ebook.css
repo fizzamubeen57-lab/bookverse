@@ -1,0 +1,416 @@
+/* ========================================
+   EBOOK HEADER
+======================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #0f172a;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 1.6rem;
+}
+
+.header .logo i {
+    color: #d4af37;
+}
+
+.header .search {
+    position: relative;
+    width: 350px;
+}
+
+.header .search input {
+    width: 100%;
+    padding: 10px 45px 10px 18px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+.header .search i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.header-icons {
+    display: flex;
+    gap: 18px;
+    font-size: 1.2rem;
+}
+
+.header-icons i {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-icons i:hover {
+    color: #d4af37;
+}
+
+/* ========================================
+   EBOOK CONTAINER
+======================================== */
+.ebook-container {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 25px;
+    padding: 30px 8%;
+    background: #f8f9fc;
+}
+
+/* ========================================
+   LEFT PANEL
+======================================== */
+.left-panel {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.left-panel img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.left-panel h2 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.left-panel .author {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.left-panel .rating {
+    color: #f5b342;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.left-panel .rating span {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.left-panel .book-info p {
+    margin: 6px 0;
+    font-size: 0.9rem;
+}
+
+.left-panel .progress {
+    margin-top: 20px;
+}
+
+.left-panel .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 20px;
+    margin: 8px 0;
+}
+
+.left-panel .progress-fill {
+    width: 32%;
+    height: 8px;
+    background: #d4af37;
+    border-radius: 20px;
+}
+
+.bookmark {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #d4af37;
+    color: #1e1e2a;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bookmark:hover {
+    background: #0f172a;
+    color: #fff;
+}
+
+/* ========================================
+   READER
+======================================== */
+.reader {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.reader-tools {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.reader-tools button {
+    padding: 8px 18px;
+    background: #0f172a;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reader-tools button:hover {
+    background: #d4af37;
+    color: #1e1e2a;
+}
+
+.reader h1 {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.reader h3 {
+    color: #777;
+    margin: 10px 0 25px;
+    font-weight: 400;
+}
+
+.book-content {
+    font-size: 1.1rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+.book-content p {
+    margin-bottom: 20px;
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.page-navigation button {
+    padding: 10px 24px;
+    background: #0f172a;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.page-navigation button:hover {
+    background: #d4af37;
+    color: #1e1e2a;
+}
+
+/* ========================================
+   RIGHT PANEL
+======================================== */
+.right-panel {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.buy-card {
+    background: linear-gradient(135deg, #0f172a, #d4af37);
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.buy-card h1 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+}
+
+.buy-card p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.buy-card .buy {
+    width: 100%;
+    padding: 14px;
+    background: #fff;
+    color: #1e1e2a;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.buy-card .buy:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.buy-card .wishlist {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.buy-card .wishlist:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.buy-card .sample {
+    width: 100%;
+    padding: 12px;
+    background: #0ea5e9;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-card .sample:hover {
+    background: #0284c7;
+}
+
+.buy-card .share {
+    margin-top: 20px;
+}
+
+.buy-card .share .social {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.buy-card .share .social i {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-card .share .social i:hover {
+    background: #fff;
+    color: #0f172a;
+}
+
+/* ========================================
+   RELATED BOOKS
+======================================== */
+.related-books {
+    padding: 30px 8% 60px;
+    background: #f8f9fc;
+}
+
+.related-books h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.related-books .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.related-books .book {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.related-books .book:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.related-books .book img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.related-books .book h4 {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 1100px) {
+    .ebook-container {
+        grid-template-columns: 1fr;
+    }
+    .left-panel,
+    .right-panel {
+        position: static;
+    }
+    .header .search {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+    .header .search {
+        width: 100%;
+    }
+    .reader h1 {
+        font-size: 1.5rem;
+    }
+    .page-navigation {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

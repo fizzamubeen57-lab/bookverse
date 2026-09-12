@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>BookVerse | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* ----- RESET & BASE ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #faf9f6;
+            color: #1e1e2a;
+            line-height: 1.5;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .section-title {
+            text-align: center;
+            padding: 2rem 1rem 0.5rem;
+        }
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #1e1e2a;
+            margin-bottom: 0.3rem;
+        }
+        .section-title p {
+            color: #555;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ----- TOP HEADER (hidden on mobile) ----- */
+        .top-header {
+            background: #1e1e2a;
+            color: #ddd;
+            padding: 0.4rem 2rem;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .top-header .contact-info span {
+            margin-left: 1.5rem;
+        }
+        .top-header i {
+            margin-right: 0.4rem;
+            color: #d4af37;
+        }
+
+        /* ----- HERO / NAV ----- */
+        .hero {
+            background: linear-gradient(135deg, #0b0b14 0%, #24243a 100%);
+            color: #fff;
+            padding: 0 0 3rem;
+            position: relative;
+        }
+        .sale-banner {
+            background: #d4af37;
+            color: #0b0b14;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.4rem;
+            letter-spacing: 0.5px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 1.2rem 2rem 0.5rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .logo i {
+            color: #d4af37;
+            margin-right: 0.3rem;
+        }
+        .nav-toggle {
+            background: transparent;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            font-size: 1.5rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            display: none; /* hidden on desktop */
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            font-weight: 400;
+            font-size: 1rem;
+            align-items: center;
+        }
+        .menu a {
+            color: #eee;
+            transition: 0.2s;
+            padding: 0.2rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        .menu a:hover,
+        .menu a.active {
+            color: #d4af37;
+            border-bottom-color: #d4af37;
+        }
+        .icons {
+            display: flex;
+            gap: 1.4rem;
+            color: #eee;
+            font-size: 1.1rem;
+        }
+        .icons i {
+            cursor: default;
+            transition: 0.2s;
+        }
+        .icons i:hover {
+            color: #d4af37;
+        }
+
+        /* hero content */
+        .hero-content {
+            max-width: 700px;
+            padding: 3rem 2rem 1rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .hero-content p {
+            font-weight: 300;
+            color: #ccc;
+            margin: 1.5rem 0 2rem;
+            font-size: 1.1rem;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .btn.gold {
+            background: #d4af37;
+            color: #0b0b14;
+        }
+        .btn.gold:hover {
+            background: #c5a12e;
+            transform: scale(1.02);
+        }
+        .btn.white {
+            background: #fff;
+            color: #0b0b14;
+        }
+        .btn.white:hover {
+            background: #e6e6e6;
+            transform: scale(1.02);
+        }
+
+        /* ----- CATEGORIES ----- */
+        .categories {
+            padding: 1.5rem 0 3rem;
+            background: #fff;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.8rem;
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+            padding: 0 1.5rem;
+        }
+        .category-card {
+            background: #f4f2ed;
+            border-radius: 20px;
+            padding: 1rem 0.5rem 1.2rem;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+        }
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        }
+        .category-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 0.8rem;
+            border: 3px solid #d4af37;
+        }
+        .category-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .category-card a {
+            color: #d4af37;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .category-card a i {
+            transition: 0.2s;
+        }
+        .category-card a:hover i {
+            transform: translateX(5px);
+        }
+
+        /* ----- FEATURED BOOKS ----- */
+        .featured-books {
+            padding: 2rem 0 3rem;
+            background: #faf9f6;
+        }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+            padding: 0 1.5rem;
+        }
+        .book-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 1.2rem 1rem 1.5rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+            transition: 0.25s;
+            position: relative;
+            text-align: center;
+        }
+        .book-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+        }
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #d4af37;
+            color: #0b0b14;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+        }
+        .book-card img {
+            width: 130px;
+            height: 180px;
+            object-fit: cover;
+            margin: 0 auto 0.8rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .book-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .book-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .rating {
+            color: #d4af37;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin: 0.2rem 0;
+        }
+        .book-info h4 {
+            font-size: 1.2rem;
+            color: #1e1e2a;
+            margin: 0.3rem 0;
+        }
+        .book-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0.6rem;
+            padding: 0 0.2rem;
+        }
+        .book-buttons a {
+            background: #1e1e2a;
+            color: #fff;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .book-buttons a i {
+            margin-right: 0.4rem;
+        }
+        .book-buttons a:hover {
+            background: #d4af37;
+            color: #0b0b14;
+        }
+        .book-buttons i.fa-heart {
+            font-size: 1.3rem;
+            color: #999;
+            cursor: default;
+            transition: 0.2s;
+        }
+        .book-buttons i.fa-heart:hover {
+            color: #d43f37;
+        }
+
+        /* ----- WHY US ----- */
+        .why-us {
+            background: #fff;
+            padding: 2rem 0 3rem;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 1.5rem auto 0;
+            padding: 0 1.5rem;
+        }
+        .why-box {
+            text-align: center;
+            padding: 1rem;
+        }
+        .why-box i {
+            font-size: 2.8rem;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+        }
+        .why-box h3 {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        .why-box p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* ----- OFFER BANNER ----- */
+        .offer-banner {
+            background: linear-gradient(135deg, #1e1e2a, #2f2f45);
+            color: #fff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+        .offer-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+        }
+        .offer-content p {
+            font-size: 1.3rem;
+            margin: 0.5rem 0 1.2rem;
+        }
+        .offer-content p span {
+            color: #d4af37;
+            font-weight: 700;
+        }
+        .offer-btn {
+            background: #d4af37;
+            color: #0b0b14;
+            padding: 0.8rem 2.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .offer-btn:hover {
+            background: #c5a12e;
+            transform: scale(1.02);
+        }
+
+        /* ----- REVIEWS ----- */
+        .reviews {
+            background: #faf9f6;
+            padding: 2rem 0 3rem;
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 1.5rem auto 0;
+            padding: 0 1.5rem;
+        }
+        .review-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .review-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 0.6rem;
+            border: 3px solid #d4af37;
+        }
+        .review-card h3 {
+            font-weight: 600;
+        }
+        .review-card .stars {
+            color: #d4af37;
+            letter-spacing: 3px;
+            font-size: 1.1rem;
+        }
+        .review-card p {
+            color: #444;
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+
+        /* ----- NEWSLETTER ----- */
+        .newsletter {
+            background: #1e1e2a;
+            color: #fff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+        .newsletter-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+        }
+        .newsletter-content p {
+            margin: 0.5rem 0 1.5rem;
+            font-weight: 300;
+        }
+        #newsletterForm {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        #newsletterForm input {
+            flex: 1 1 200px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 60px;
+            border: none;
+            font-size: 1rem;
+            outline: 2px solid transparent;
+            transition: 0.2s;
+        }
+        #newsletterForm input:focus {
+            outline: 2px solid #d4af37;
+        }
+        #newsletterForm button {
+            background: #d4af37;
+            color: #0b0b14;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        #newsletterForm button:hover {
+            background: #c5a12e;
+        }
+
+        /* ----- FOOTER ----- */
+        .footer {
+            background: #0b0b14;
+            color: #ccc;
+            padding: 2.5rem 1.5rem 1rem;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-box h3 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        .footer-box p,
+        .footer-box a {
+            font-weight: 300;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #bbb;
+        }
+        .footer-box a:hover {
+            color: #d4af37;
+        }
+        .footer-box i {
+            margin-right: 0.5rem;
+            color: #d4af37;
+            width: 1.2rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.6rem;
+        }
+        .social-icons a {
+            background: #1e1e2a;
+            color: #ddd;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+        .social-icons a:hover {
+            background: #d4af37;
+            color: #0b0b14;
+        }
+        .footer hr {
+            border-color: #2a2a3a;
+            margin: 2rem 0 1rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .copyright {
+            text-align: center;
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* ----- MOBILE RESPONSIVE (≤ 768px) ----- */
+        @media screen and (max-width: 768px) {
+            .top-header {
+                display: none;
+            }
+            .nav-toggle {
+                display: block; /* show hamburger */
+                order: 2;
+            }
+            .logo {
+                order: 1;
+                flex: 1;
+            }
+            .icons {
+                order: 3;
+                gap: 0.8rem;
+                font-size: 1rem;
+            }
+            .menu {
+                display: none; /* hidden by default */
+                flex-direction: column;
+                width: 100%;
+                order: 4;
+                background: #0b0b14;
+                padding: 1.2rem 0;
+                margin-top: 0.8rem;
+                border-radius: 20px;
+                gap: 0.6rem;
+                align-items: center;
+            }
+            .menu.open {
+                display: flex;
+            }
+            .menu a {
+                font-size: 1rem;
+                padding: 0.4rem 0;
+                width: 100%;
+                text-align: center;
+                border-bottom: none;
+            }
+            .menu a.active {
+                color: #d4af37;
+                border-bottom: 2px solid #d4af37;
+            }
+
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 0.6rem 1.8rem;
+                font-size: 0.9rem;
+            }
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .books-grid {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 1.2rem;
+            }
+            .book-card img {
+                width: 100px;
+                height: 140px;
+            }
+            .offer-content h2 {
+                font-size: 2rem;
+            }
+            .offer-content p {
+                font-size: 1.1rem;
+            }
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav {
+                padding: 0.8rem 1rem;
+            }
+            .logo {
+                font-size: 1.5rem;
+            }
+            .icons {
+                gap: 0.6rem;
+                font-size: 0.9rem;
+            }
+            .hero-content {
+                padding: 2rem 1rem 0.5rem;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .category-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+                padding: 0 1rem;
+            }
+            .category-card img {
+                width: 60px;
+                height: 60px;
+            }
+            .books-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+                padding: 0 1rem;
+            }
+            .book-card {
+                padding: 0.8rem 0.5rem 1rem;
+            }
+            .book-card img {
+                width: 85px;
+                height: 120px;
+            }
+            .book-buttons a {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.7rem;
+            }
+            .book-buttons i.fa-heart {
+                font-size: 1rem;
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+            .offer-content h2 {
+                font-size: 1.7rem;
+            }
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+            #newsletterForm input {
+                flex: 1 1 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+            <span><i class="fa-solid fa-envelope"></i> info@bookverse.com</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="sale-banner">🔥 SUMMER BOOK FESTIVAL • UP TO 50% OFF 🔥</div>
+        <nav>
+            <div class="logo"><i class="fa-solid fa-book-open"></i> BookVerse</div>
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="menu" id="menuList">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">E-Books</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Discover the World of Books</h1>
+            <p>Explore thousands of books and e-books from your favourite authors. Read, learn and enjoy premium collections with amazing discounts.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn gold">Explore Books</a>
+                <a href="#" class="btn white">Read E-Books</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories">
+        <div class="section-title">
+            <h2>Browse Categories</h2>
+            <p>Find books from your favourite category and start your reading journey.</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' fill='%23d4af37'/%3E%3Ctext x='35' y='45' font-size='28' text-anchor='middle' fill='%230b0b14' font-family='serif'%3EF%3C/text%3E%3C/svg%3E" alt="Fiction">
+                <h3>Fiction</h3>
+                <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="category-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' fill='%23d4af37'/%3E%3Ctext x='35' y='45' font-size='28' text-anchor='middle' fill='%230b0b14' font-family='monospace'%3E%3C/text%3E%3C/svg%3E" alt="Programming">
+                <h3>Programming</h3>
+                <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="category-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' fill='%23d4af37'/%3E%3Ctext x='35' y='45' font-size='28' text-anchor='middle' fill='%230b0b14' font-family='serif'%3EB%3C/text%3E%3C/svg%3E" alt="Business">
+                <h3>Business</h3>
+                <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="category-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' fill='%23d4af37'/%3E%3Ctext x='35' y='45' font-size='28' text-anchor='middle' fill='%230b0b14' font-family='serif'%3EI%3C/text%3E%3C/svg%3E" alt="Islamic">
+                <h3>Islamic Books</h3>
+                <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="category-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' fill='%23d4af37'/%3E%3Ctext x='35' y='45' font-size='28' text-anchor='middle' fill='%230b0b14' font-family='serif'%3EH%3C/text%3E%3C/svg%3E" alt="History">
+                <h3>History</h3>
+                <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="category-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Crect width='70' height='70' fill='%23d4af37'/%3E%3Ctext x='35' y='45' font-size='28' text-anchor='middle' fill='%230b0b14' font-family='serif'%3EA%3C/text%3E%3C/svg%3E" alt="Academic">
+                <h3>Academic</h3>
+                <a href="#">Explore <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED BOOKS -->
+    <section class="featured-books">
+        <div class="section-title">
+            <h2>Featured Books</h2>
+            <p>Handpicked books specially for our readers.</p>
+        </div>
+        <div class="books-grid">
+            <div class="book-card">
+                <span class="badge">Best Seller</span>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='180' viewBox='0 0 130 180'%3E%3Crect width='130' height='180' fill='%232a2a3a'/%3E%3Ctext x='65' y='95' font-size='18' text-anchor='middle' fill='%23d4af37' font-family='serif'%3EA.H%3C/text%3E%3C/svg%3E" alt="Atomic Habits">
+                <div class="book-info">
+                    <h3>Atomic Habits</h3>
+                    <p>James Clear</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <h4>$15.99</h4>
+                    <div class="book-buttons">
+                        <a href="#"><i class="fa-solid fa-cart-plus"></i> Add</a>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <span class="badge">Popular</span>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='180' viewBox='0 0 130 180'%3E%3Crect width='130' height='180' fill='%232a2a3a'/%3E%3Ctext x='65' y='95' font-size='16' text-anchor='middle' fill='%23d4af37' font-family='serif'%3ER.D.P.D%3C/text%3E%3C/svg%3E" alt="Rich Dad Poor Dad">
+                <div class="book-info">
+                    <h3>Rich Dad Poor Dad</h3>
+                    <p>Robert Kiyosaki</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <h4>$18.99</h4>
+                    <div class="book-buttons">
+                        <a href="#"><i class="fa-solid fa-cart-plus"></i> Add</a>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <span class="badge">New</span>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='180' viewBox='0 0 130 180'%3E%3Crect width='130' height='180' fill='%232a2a3a'/%3E%3Ctext x='65' y='95' font-size='16' text-anchor='middle' fill='%23d4af37' font-family='serif'%3EP.O.M%3C/text%3E%3C/svg%3E" alt="Psychology of Money">
+                <div class="book-info">
+                    <h3>Psychology of Money</h3>
+                    <p>Morgan Housel</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <h4>$16.50</h4>
+                    <div class="book-buttons">
+                        <a href="#"><i class="fa-solid fa-cart-plus"></i> Add</a>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <span class="badge">Editor's Pick</span>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='180' viewBox='0 0 130 180'%3E%3Crect width='130' height='180' fill='%232a2a3a'/%3E%3Ctext x='65' y='95' font-size='16' text-anchor='middle' fill='%23d4af37' font-family='monospace'%3EClean%3C/text%3E%3C/svg%3E" alt="Clean Code">
+                <div class="book-info">
+                    <h3>Clean Code</h3>
+                    <p>Robert C. Martin</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <h4>$22.99</h4>
+                    <div class="book-buttons">
+                        <a href="#"><i class="fa-solid fa-cart-plus"></i> Add</a>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-us">
+        <div class="section-title">
+            <h2>Why Choose BookVerse?</h2>
+            <p>We provide the best reading experience for book lovers.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-box">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h3>15,000+ Books</h3>
+                <p>Explore thousands of books from every category.</p>
+            </div>
+            <div class="why-box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Quick delivery with secure packaging.</p>
+            </div>
+            <div class="why-box">
+                <i class="fa-solid fa-download"></i>
+                <h3>Instant E-Books</h3>
+                <p>Download your favourite e-books instantly.</p>
+            </div>
+            <div class="why-box">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Secure Payment</h3>
+                <p>100% safe and trusted payment methods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER BANNER -->
+    <section class="offer-banner">
+        <div class="offer-content">
+            <h2>📚 Summer Reading Festival</h2>
+            <p>Enjoy Up To <span>50% OFF</span> On Best Selling Books.</p>
+            <a href="#" class="offer-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+        <div class="section-title">
+            <h2>What Our Readers Say</h2>
+            <p>Thousands of readers trust BookVerse for quality books and excellent service.</p>
+        </div>
+        <div class="review-grid">
+            <div class="review-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Ccircle cx='35' cy='35' r='32' fill='%23d4af37'/%3E%3Ctext x='35' y='42' font-size='24' text-anchor='middle' fill='%230b0b14'%3EA%3C/text%3E%3C/svg%3E" alt="Ali Ahmed">
+                <h3>Ali Ahmed</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Amazing collection of books and very fast delivery. Highly recommended!"</p>
+            </div>
+            <div class="review-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Ccircle cx='35' cy='35' r='32' fill='%23d4af37'/%3E%3Ctext x='35' y='42' font-size='24' text-anchor='middle' fill='%230b0b14'%3ES%3C/text%3E%3C/svg%3E" alt="Sara Khan">
+                <h3>Sara Khan</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Beautiful website and affordable prices. I love buying books from BookVerse."</p>
+            </div>
+            <div class="review-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Ccircle cx='35' cy='35' r='32' fill='%23d4af37'/%3E%3Ctext x='35' y='42' font-size='24' text-anchor='middle' fill='%230b0b14'%3EF%3C/text%3E%3C/svg%3E" alt="Fatima Noor">
+                <h3>Fatima Noor</h3>
+                <div class="stars">★★★★★</div>
+                <p>"The e-book collection is fantastic. Download process is very easy."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe To Our Newsletter</h2>
+            <p>Get updates about new books, special discounts and exclusive offers.</p>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>BookVerse</h3>
+                <p>Your trusted online bookstore for books and e-books. Discover knowledge, imagination and inspiration in one place.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Books</a>
+                <a href="#">E-Books</a>
+                <a href="#">Categories</a>
+                <a href="#">Explore</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-envelope"></i> info@bookverse.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Faisalabad, Pakistan</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2026 BookVerse | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        (function() {
+            // Mobile nav toggle
+            const toggle = document.getElementById('navToggle');
+            const menu = document.getElementById('menuList');
+
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('open');
+                    // change icon
+                    const icon = toggle.querySelector('i');
+                    if (menu.classList.contains('open')) {
+                        icon.className = 'fa-solid fa-xmark';
+                    } else {
+                        icon.className = 'fa-solid fa-bars';
+                    }
+                });
+
+                // Close menu when clicking a link (optional)
+                const links = menu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        menu.classList.remove('open');
+                        const icon = toggle.querySelector('i');
+                        if (icon) icon.className = 'fa-solid fa-bars';
+                    });
+                });
+
+                // Close menu when clicking outside (optional)
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+                        menu.classList.remove('open');
+                        const icon = toggle.querySelector('i');
+                        if (icon) icon.className = 'fa-solid fa-bars';
+                    }
+                });
+            }
+
+            // Newsletter form (prevent default)
+            const form = document.getElementById('newsletterForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = document.getElementById('newsletterEmail');
+                    if (emailInput && emailInput.value.trim() !== '') {
+                        alert('Thank you for subscribing, ' + emailInput.value.trim() + '!');
+                        emailInput.value = '';
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+            }
+
+            // All nav links are functional (they show alert to simulate navigation)
+            // but we keep them as # so they don't reload. 
+            // Adding a small enhancement: any link with href="#" will show a friendly message.
+            const allLinks = document.querySelectorAll('a[href="#"]');
+            allLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Only show for main nav links and footer links, not for book buttons
+                    if (this.closest('.menu') || this.closest('.footer-box') || this.classList.contains('btn') || this.classList.contains('offer-btn')) {
+                        alert('Navigation to "' + this.textContent.trim() + '" page (simulated)');
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

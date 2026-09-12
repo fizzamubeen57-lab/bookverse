@@ -1,0 +1,236 @@
+/* ========================================
+   BOOKS HERO
+======================================== */
+.books-hero {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../images/book-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: zoomHero 15s infinite alternate;
+}
+
+@keyframes zoomHero {
+    from { background-size: 100%; }
+    to { background-size: 110%; }
+}
+
+.books-hero-content {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 90%;
+}
+
+.books-hero-content h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.books-hero-content p {
+    max-width: 700px;
+    margin: 15px auto 25px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.book-search {
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.book-search input {
+    flex: 1;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.book-search button {
+    padding: 14px 24px;
+    background: #d4af37;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.book-search button:hover {
+    background: #f5c518;
+}
+
+/* ========================================
+   BOOK CATEGORIES
+======================================== */
+.book-categories {
+    background: #fff;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.category-grid .category-card {
+    background: #f8f9fc;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.category-grid .category-card:hover {
+    background: #0f172a;
+    transform: translateY(-8px);
+}
+
+.category-grid .category-card i {
+    font-size: 2.8rem;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.category-grid .category-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.category-grid .category-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.category-grid .category-card:hover h3,
+.category-grid .category-card:hover p {
+    color: #fff;
+}
+
+/* ========================================
+   ALL BOOKS
+======================================== */
+.all-books {
+    background: #f8f9fc;
+}
+
+/* ========================================
+   BEST SELLERS
+======================================== */
+.best-sellers {
+    background: #fff;
+}
+
+.best-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.best-book {
+    background: #f8f9fc;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.best-book:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.best-book img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+}
+
+.best-book h3 {
+    font-size: 1.1rem;
+}
+
+.best-book p {
+    color: #777;
+}
+
+/* ========================================
+   NEW ARRIVALS
+======================================== */
+.new-arrivals {
+    background: #f8f9fc;
+}
+
+.arrival-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.arrival-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.arrival-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.arrival-card img {
+    width: 130px;
+    height: 190px;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+}
+
+.arrival-card h3 {
+    font-size: 1.1rem;
+}
+
+.arrival-card p {
+    color: #777;
+    margin: 5px 0 10px;
+}
+
+.arrival-card span {
+    display: inline-block;
+    background: #d4af37;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 768px) {
+    .books-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .book-search {
+        flex-direction: column;
+    }
+    .book-search input {
+        border-radius: 50px;
+        margin-bottom: 10px;
+    }
+    .book-search button {
+        border-radius: 50px;
+        width: 100%;
+    }
+}

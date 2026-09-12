@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories | BookVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categories.css">
+</head>
+<body>
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+            <span><i class="fa-solid fa-envelope"></i> info@bookverse.com</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="categories-hero">
+        <nav>
+            <div class="logo"><i class="fa-solid fa-book-open"></i> BookVerse</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="ebooks.html">E-Books</a></li>
+                <li><a href="categories.html" class="active">Categories</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
+        <div class="categories-hero-content">
+            <span class="subtitle">📚 Explore Every Genre</span>
+            <h1>Find Books by Category</h1>
+            <p>Browse thousands of books across different categories. Whether you love Fiction, Programming, Business, Philosophy, History, or Islamic Studies, you'll find the perfect book here.</p>
+            <div class="category-search">
+                <input type="text" id="categorySearch" placeholder="Search Categories..." onkeyup="filterCategories()">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL CATEGORIES -->
+    <section class="categories-section">
+        <div class="section-title">
+            <h2>All Categories</h2>
+            <p>Choose your favorite category and discover amazing books.</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid">
+            <!-- Categories loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated with BookVerse</h2>
+            <p>Subscribe to our newsletter and receive updates about new books, exclusive offers, best sellers, and upcoming collections directly in your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>BookVerse</h3>
+                <p>BookVerse is your trusted online destination for discovering, purchasing, and reading thousands of books and e-books from different categories.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="ebooks.html">E-Books</a>
+                <a href="categories.html">Categories</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Popular Categories</h3>
+                <a href="books.html">Programming</a>
+                <a href="books.html">Philosophy</a>
+                <a href="books.html">Business</a>
+                <a href="books.html">History</a>
+                <a href="books.html">Islamic</a>
+                <a href="books.html">Self Development</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-envelope"></i> info@bookverse.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Faisalabad, Pakistan</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2026 BookVerse. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/categories.js"></script>
+</body>
+</html>

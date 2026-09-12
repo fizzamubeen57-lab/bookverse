@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | BookVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explore.css">
+</head>
+<body>
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> +92 300 1234567</span>
+            <span><i class="fa-solid fa-envelope"></i> info@bookverse.com</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="explore-hero">
+        <nav>
+            <div class="logo"><i class="fa-solid fa-book-open"></i> BookVerse</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="ebooks.html">E-Books</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="explore.html" class="active">Explore</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
+        <div class="explore-hero-content">
+            <h1>Explore the Greatest Philosophers</h1>
+            <p>Discover the world's greatest thinkers, their ideas, famous books, and timeless wisdom that shaped civilization.</p>
+            <div class="search-box">
+                <input type="text" id="philosopherSearch" placeholder="Search Philosopher..." onkeyup="filterPhilosophers()">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY CATEGORIES -->
+    <section class="philosophy-categories">
+        <div class="section-title">
+            <h2>Philosophy Categories</h2>
+            <p>Explore philosophy from different civilizations and traditions.</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <i class="fa-solid fa-landmark"></i>
+                <h3>Greek Philosophy</h3>
+                <p>Socrates, Plato & Aristotle</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-mosque"></i>
+                <h3>Islamic Philosophy</h3>
+                <p>Ibn Sina, Al-Farabi & Ibn Rushd</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-yin-yang"></i>
+                <h3>Chinese Philosophy</h3>
+                <p>Confucius & Lao Tzu</p>
+            </div>
+            <div class="category-card">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Modern Philosophy</h3>
+                <p>Kant, Nietzsche & Descartes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHERS -->
+    <section class="philosophers" id="philosophers">
+        <div class="section-title">
+            <h2>World's Greatest Philosophers</h2>
+            <p>Meet the greatest minds whose ideas changed the world forever.</p>
+        </div>
+        <div class="philosopher-grid" id="philosopherGrid">
+            <!-- Philosophers loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- FAMOUS QUOTES -->
+    <section class="quotes">
+        <div class="section-title">
+            <h2>Quotes That Changed the World</h2>
+        </div>
+        <div class="quote-box">
+            <h3>"The unexamined life is not worth living."</h3>
+            <p>— Socrates</p>
+        </div>
+        <div class="quote-box">
+            <h3>"Knowing yourself is the beginning of all wisdom."</h3>
+            <p>— Aristotle</p>
+        </div>
+        <div class="quote-box">
+            <h3>"I think, therefore I am."</h3>
+            <p>— René Descartes</p>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Philosophy Community</h2>
+            <p>Subscribe to receive articles, book recommendations, and updates about the world's greatest philosophers.</p>
+            <form>
+                <input type="email" placeholder="Enter Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>BookVerse</h3>
+                <p>Explore books, philosophy, knowledge, and timeless wisdom from the greatest thinkers in history.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="ebooks.html">E-Books</a>
+                <a href="categories.html">Categories</a>
+                <a href="explore.html">Explore</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-envelope"></i> info@bookverse.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Faisalabad, Pakistan</p>
+            </div>
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2026 BookVerse | Explore Knowledge • Read Books • Inspire Minds</p>
+    </footer>
+
+    <script src="js/explore.js"></script>
+</body>
+</html>
